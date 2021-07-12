@@ -1,0 +1,130 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:System="clr-namespace:System;assembly=mscorlib" 
+        x:Class="EdytorTekstowy.MainWindow"
+        xmlns:self="clr-namespace:EdytorTekstowy"
+        Title="Edytor Tekstowy" Height="550" Width="700" Icon="pencil.png">
+    <Window.CommandBindings>
+        <CommandBinding Command="self:CustomCommands.QuitApp" Executed="QuitApp_Executed" CanExecute="QuitApp_CanExecute"/>
+        <CommandBinding Command="self:CustomCommands.About" Executed="About_Executed" CanExecute="About_CanExecute"/>
+        <CommandBinding Command="New" Executed="New_Executed" CanExecute="New_CanExecute"/>
+        <CommandBinding Command="Open" Executed="Open_Executed" CanExecute="Open_CanExecute"/>
+        <CommandBinding Command="Save" Executed="Save_Executed" CanExecute="Save_CanExecute"/>
+        <CommandBinding Command="SaveAs" Executed="SaveAs_Executed" CanExecute="SaveAs_CanExecute"/>
+        <CommandBinding Command="Help" Executed="Help_Executed" CanExecute="Help_CanExecute"/>
+    </Window.CommandBindings>
+
+    <Grid>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_Plik">
+                    <MenuItem Header="Nowy" Command="New" ToolTip="Tworzysz nowy dokument.">
+                        <MenuItem.Icon>
+                            <Image Source="New.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                    <MenuItem Header="Otwórz" Command="Open" ToolTip="Otwórz istniejący dokumnt.">
+                        <MenuItem.Icon>
+                            <Image Source="/images/OpenFileIcon.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <Separator />
+                    <MenuItem Header="Zapisz" Command="Save" ToolTip="Zapisz dokument.">
+                        <MenuItem.Icon>
+                            <Image Source="/images/save.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Zapisz jako" Command="SaveAs" ToolTip="Zapisz dokument jako.">
+                        <MenuItem.Icon>
+                            <Image Source="/images/saveas.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <Separator />
+                    <MenuItem Header="Wyjście" Command="self:CustomCommands.QuitApp" ToolTip="Zamkniecie dokumentu.">
+                        <MenuItem.Icon>
+                            <Image Source="/images/exit.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Header="_Edycja">
+                    <MenuItem Header="Cofnij" Command="ApplicationCommands.Undo" ToolTip="Cofnij.">
+                        <MenuItem.Icon>
+                            <Image Source="/images/Undo.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Ponów" Command="ApplicationCommands.Redo" ToolTip="Do przodu.">
+                        <MenuItem.Icon>
+                            <Image Source="/images/Redo.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <Separator/>
+                    <MenuItem Header="Wytnij" Command="ApplicationCommands.Cut" ToolTip="Wytnij zaznaczone.">
+                        <MenuItem.Icon>
+                            <Image Source="/images/Cut.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Kopiuj" Command="ApplicationCommands.Copy" ToolTip="Kopiuj zaznaczone.">
+                        <MenuItem.Icon>
+                            <Image Source="/images/Copy.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Wklej" Command="ApplicationCommands.Paste" ToolTip="Wklej zaznaczony tekst.">
+                        <MenuItem.Icon>
+                            <Image Source="/images/Paste.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Header="_Pomoc">
+                    <MenuItem Header="Pomoc" Command="Help" ToolTip="Pomoc.">
+                        <MenuItem.Icon>
+                            <Image Source="images/help.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <Separator/>
+                    <MenuItem Header="O programie" Command="self:CustomCommands.About" ToolTip="Informacje o programie.">
+                        <MenuItem.Icon>
+                            <Image Source="images/about.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+            </Menu>
+            <ToolBarTray DockPanel.Dock="Top">
+            <ToolBar>
+                <ToggleButton Command="EditingCommands.ToggleBold">
+                    <Image Source="images/Bold.png" Width="20" Height="20"/>
+                </ToggleButton>
+                <ToggleButton Command="EditingCommands.ToggleUnderline">
+                    <Image Source="images/Underline.png" Width="20" Height="20"/>
+                </ToggleButton>
+                <ToggleButton Command="EditingCommands.ToggleItalic">
+                    <Image Source="images/Italic.png" Width="20" Height="20"/>
+                </ToggleButton>                
+                    <TextBox Name="FontSizeNum" Width="30" TextChanged="FontSizeNum_TextChanged">
+                    </TextBox>
+                    <Separator/>
+                <ToggleButton Command="EditingCommands.AlignLeft">
+                    <Image Source="images/AlignLeft.png" Width="20" Height="20"/>
+                </ToggleButton>
+                <ToggleButton Command="EditingCommands.AlignCenter">
+                    <Image Source="images/AlignCenter.png" Width="20" Height="20"/>
+                </ToggleButton>
+                <ToggleButton Command="EditingCommands.AlignRight">
+                    <Image Source="images/AlignRight.png" Width="20" Height="20"/>
+                </ToggleButton>
+                <Separator/>
+                <ToggleButton Command="EditingCommands.ToggleBullets">
+                    <Image Source="images/Bulletlist.png" Width="20" Height="20"/>
+                </ToggleButton>
+                <ToggleButton Command="EditingCommands.ToggleNumbering">
+                    <Image Source="images/NumbersList.png" Width="20" Height="20"/>
+                </ToggleButton>
+            </ToolBar>
+        </ToolBarTray>
+            <RichTextBox Name="TextContent" TextChanged="TextContent_TextChanged" Margin="10,10,10,10" FontFamily="Arial"/>
+        </DockPanel>
+    </Grid>
+</Window>
+
+    

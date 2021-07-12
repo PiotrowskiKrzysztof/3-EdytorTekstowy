@@ -1,0 +1,16 @@
+C:\Users\Damian\Desktop\EdytorWPF\EdytorTekstowy\EdytorTekstowy\bin\Release\EdytorTekstowy.exe.config
+C:\Users\Damian\Desktop\EdytorWPF\EdytorTekstowy\EdytorTekstowy\bin\Release\EdytorTekstowy.exe
+C:\Users\Damian\Desktop\EdytorWPF\EdytorTekstowy\EdytorTekstowy\bin\Release\EdytorTekstowy.pdb
+C:\Users\Damian\Desktop\EdytorWPF\EdytorTekstowy\EdytorTekstowy\obj\Release\MainWindow.g.cs
+C:\Users\Damian\Desktop\EdytorWPF\EdytorTekstowy\EdytorTekstowy\obj\Release\SaveChanges.g.cs
+C:\Users\Damian\Desktop\EdytorWPF\EdytorTekstowy\EdytorTekstowy\obj\Release\App.g.cs
+C:\Users\Damian\Desktop\EdytorWPF\EdytorTekstowy\EdytorTekstowy\obj\Release\EdytorTekstowy_MarkupCompile.cache
+C:\Users\Damian\Desktop\EdytorWPF\EdytorTekstowy\EdytorTekstowy\obj\Release\EdytorTekstowy_MarkupCompile.lref
+C:\Users\Damian\Desktop\EdytorWPF\EdytorTekstowy\EdytorTekstowy\obj\Release\MainWindow.baml
+C:\Users\Damian\Desktop\EdytorWPF\EdytorTekstowy\EdytorTekstowy\obj\Release\SaveChanges.baml
+C:\Users\Damian\Desktop\EdytorWPF\EdytorTekstowy\EdytorTekstowy\obj\Release\EdytorTekstowy.g.resources
+C:\Users\Damian\Desktop\EdytorWPF\EdytorTekstowy\EdytorTekstowy\obj\Release\EdytorTekstowy.Properties.Resources.resources
+C:\Users\Damian\Desktop\EdytorWPF\EdytorTekstowy\EdytorTekstowy\obj\Release\EdytorTekstowy.csproj.GenerateResource.cache
+C:\Users\Damian\Desktop\EdytorWPF\EdytorTekstowy\EdytorTekstowy\obj\Release\EdytorTekstowy.csproj.CoreCompileInputs.cache
+C:\Users\Damian\Desktop\EdytorWPF\EdytorTekstowy\EdytorTekstowy\obj\Release\EdytorTekstowy.exe
+C:\Users\Damian\Desktop\EdytorWPF\EdytorTekstowy\EdytorTekstowy\obj\Release\EdytorTekstowy.pdb
